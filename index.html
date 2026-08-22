@@ -257,10 +257,10 @@ body.crt-off .scanlines{display:none}
 .inv-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(96px,1fr));gap:10px}
 .inv-slot{
   border:2px solid var(--dim2);background:rgba(255,255,255,.03);
-  padding:10px 6px;text-align:center;transition:all .2s;cursor:default;
+  padding:18px 6px;text-align:center;transition:all .2s;cursor:default;
+  display:flex;align-items:center;justify-content:center;min-height:56px;
 }
 .inv-slot:hover{border-color:var(--cyan);background:rgba(0,246,255,.08);box-shadow:0 0 12px rgba(0,246,255,.4);transform:translateY(-2px)}
-.inv-icon{font-size:1.1rem;margin-bottom:6px}
 .inv-label{font-size:.42rem;color:var(--dim);line-height:1.5;word-break:break-word}
 
 /* ══════════════════════════════════════
@@ -302,8 +302,8 @@ body.crt-off .scanlines{display:none}
 ══════════════════════════════════════ */
 .guild-row{display:flex;align-items:center;gap:14px;padding:14px 16px;margin-bottom:10px}
 .guild-badge{
-  width:34px;height:34px;flex-shrink:0;border:2px solid var(--yellow);color:var(--yellow);
-  display:flex;align-items:center;justify-content:center;font-size:.5rem;
+  min-width:34px;height:34px;padding:0 6px;flex-shrink:0;border:2px solid var(--yellow);color:var(--yellow);
+  display:flex;align-items:center;justify-content:center;font-size:.42rem;
 }
 .guild-name{font-size:.5rem;line-height:1.8;color:var(--dim)}
 
@@ -312,20 +312,16 @@ body.crt-off .scanlines{display:none}
 ══════════════════════════════════════ */
 .boss-banner{font-size:.7rem;color:var(--red);text-align:center;margin-bottom:6px;text-shadow:0 0 10px rgba(255,56,96,.6)}
 .boss-flavor{font-size:.5rem;color:var(--dim);text-align:center;margin-bottom:22px;line-height:1.9}
-.boss-bar-row{max-width:420px;margin:0 auto 30px}
-.boss-bar-label{display:flex;justify-content:space-between;font-size:.5rem;color:var(--yellow);margin-bottom:6px}
-.boss-bar-track{height:14px;background:rgba(255,255,255,.08);border:2px solid var(--red)}
-.boss-bar-fill{height:100%;width:0;background:repeating-linear-gradient(90deg,var(--red) 0 6px,#7a1330 6px 8px)}
-
 .battle-menu{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;max-width:640px;margin:0 auto}
 .battle-opt{
-  display:flex;align-items:center;gap:12px;padding:14px 16px;
+  display:flex;flex-direction:column;align-items:flex-start;gap:8px;padding:14px 16px;
   border:2px solid var(--cyan);background:rgba(0,246,255,.05);
-  font-size:.52rem;text-align:left;transition:transform .12s,box-shadow .12s;
+  text-align:left;transition:transform .12s,box-shadow .12s;
   box-shadow:3px 3px 0 rgba(0,246,255,.25);
 }
 .battle-opt:active{transform:translate(3px,3px);box-shadow:0 0 0 rgba(0,246,255,.25)}
-.battle-opt .ic{font-size:1rem}
+.battle-opt .opt-tag{font-size:.42rem;letter-spacing:.06em;opacity:.65}
+.battle-opt .opt-val{font-size:.46rem;line-height:1.7;word-break:break-all}
 .battle-opt.pink{border-color:var(--pink);background:rgba(255,46,151,.06);box-shadow:3px 3px 0 rgba(255,46,151,.25)}
 .battle-opt.yellow{border-color:var(--yellow);background:rgba(255,231,76,.06);box-shadow:3px 3px 0 rgba(255,231,76,.25)}
 
@@ -403,7 +399,7 @@ body.crt-off .scanlines{display:none}
 <div class="stage">
   <div class="console-shell" id="shell">
     <div class="shell-top">
-      <div class="shell-brand"><b>CAM</b>-VENTURE™</div>
+      <div class="shell-brand"><b>CAM</b></div>
       <div class="shell-lights">
         <div class="shell-grille"><i></i><i></i><i></i><i></i><i></i><i></i></div>
         <div class="shell-led" title="Power"></div>
@@ -448,8 +444,8 @@ body.crt-off .scanlines{display:none}
                   <div class="bar-track"><div class="bar-fill hp" data-w="100"></div></div>
                 </div>
                 <div class="bar-row">
-                  <div class="bar-label"><span>MP (CURIOSITY)</span><span>96/100</span></div>
-                  <div class="bar-track"><div class="bar-fill mp" data-w="96"></div></div>
+                  <div class="bar-label"><span>MP (CURIOSITY)</span><span>100/100</span></div>
+                  <div class="bar-track"><div class="bar-fill mp" data-w="100"></div></div>
                 </div>
               </div>
 
@@ -558,64 +554,64 @@ body.crt-off .scanlines{display:none}
             <div class="inv-group">
               <div class="inv-group-title">LANGUAGES &amp; FRONT&#8209;END</div>
               <div class="inv-grid">
-                <div class="inv-slot"><div class="inv-icon">🐍</div><div class="inv-label">Python</div></div>
-                <div class="inv-slot"><div class="inv-icon">🟨</div><div class="inv-label">JavaScript</div></div>
-                <div class="inv-slot"><div class="inv-icon">🔷</div><div class="inv-label">TypeScript</div></div>
-                <div class="inv-slot"><div class="inv-icon">📊</div><div class="inv-label">R</div></div>
-                <div class="inv-slot"><div class="inv-icon">🧱</div><div class="inv-label">HTML5</div></div>
-                <div class="inv-slot"><div class="inv-icon">🎨</div><div class="inv-label">CSS3</div></div>
-                <div class="inv-slot"><div class="inv-icon">🗄️</div><div class="inv-label">SQL</div></div>
-                <div class="inv-slot"><div class="inv-icon">⚛️</div><div class="inv-label">React</div></div>
-                <div class="inv-slot"><div class="inv-icon">📜</div><div class="inv-label">LaTeX</div></div>
+                <div class="inv-slot"><div class="inv-label">Python</div></div>
+                <div class="inv-slot"><div class="inv-label">JavaScript</div></div>
+                <div class="inv-slot"><div class="inv-label">TypeScript</div></div>
+                <div class="inv-slot"><div class="inv-label">R</div></div>
+                <div class="inv-slot"><div class="inv-label">HTML5</div></div>
+                <div class="inv-slot"><div class="inv-label">CSS3</div></div>
+                <div class="inv-slot"><div class="inv-label">SQL</div></div>
+                <div class="inv-slot"><div class="inv-label">React</div></div>
+                <div class="inv-slot"><div class="inv-label">LaTeX</div></div>
               </div>
             </div>
 
             <div class="inv-group">
               <div class="inv-group-title">BACK&#8209;END &amp; DEVOPS</div>
               <div class="inv-grid">
-                <div class="inv-slot"><div class="inv-icon">🧪</div><div class="inv-label">Flask</div></div>
-                <div class="inv-slot"><div class="inv-icon">🗂️</div><div class="inv-label">Supabase</div></div>
-                <div class="inv-slot"><div class="inv-icon">🔌</div><div class="inv-label">REST APIs</div></div>
-                <div class="inv-slot"><div class="inv-icon">🐘</div><div class="inv-label">PostgreSQL</div></div>
-                <div class="inv-slot"><div class="inv-icon">🐙</div><div class="inv-label">Git/GitHub</div></div>
-                <div class="inv-slot"><div class="inv-icon">🚀</div><div class="inv-label">Netlify</div></div>
-                <div class="inv-slot"><div class="inv-icon">⌨️</div><div class="inv-label">CLI Tools</div></div>
+                <div class="inv-slot"><div class="inv-label">Flask</div></div>
+                <div class="inv-slot"><div class="inv-label">Supabase</div></div>
+                <div class="inv-slot"><div class="inv-label">REST APIs</div></div>
+                <div class="inv-slot"><div class="inv-label">PostgreSQL</div></div>
+                <div class="inv-slot"><div class="inv-label">Git/GitHub</div></div>
+                <div class="inv-slot"><div class="inv-label">Netlify</div></div>
+                <div class="inv-slot"><div class="inv-label">CLI Tools</div></div>
               </div>
             </div>
 
             <div class="inv-group">
               <div class="inv-group-title">BIOINFORMATICS</div>
               <div class="inv-grid">
-                <div class="inv-slot"><div class="inv-icon">🧬</div><div class="inv-label">BLAST</div></div>
-                <div class="inv-slot"><div class="inv-icon">🧬</div><div class="inv-label">MEGA</div></div>
-                <div class="inv-slot"><div class="inv-icon">🧬</div><div class="inv-label">IGV</div></div>
-                <div class="inv-slot"><div class="inv-icon">💊</div><div class="inv-label">AutoDock Vina</div></div>
-                <div class="inv-slot"><div class="inv-icon">💊</div><div class="inv-label">Meeko</div></div>
-                <div class="inv-slot"><div class="inv-icon">💊</div><div class="inv-label">RDKit</div></div>
+                <div class="inv-slot"><div class="inv-label">BLAST</div></div>
+                <div class="inv-slot"><div class="inv-label">MEGA</div></div>
+                <div class="inv-slot"><div class="inv-label">IGV</div></div>
+                <div class="inv-slot"><div class="inv-label">AutoDock Vina</div></div>
+                <div class="inv-slot"><div class="inv-label">Meeko</div></div>
+                <div class="inv-slot"><div class="inv-label">RDKit</div></div>
               </div>
             </div>
 
             <div class="inv-group">
               <div class="inv-group-title">DESIGN &amp; ANALYTICS</div>
               <div class="inv-grid">
-                <div class="inv-slot"><div class="inv-icon">🖌️</div><div class="inv-label">Figma</div></div>
-                <div class="inv-slot"><div class="inv-icon">📈</div><div class="inv-label">Tableau</div></div>
-                <div class="inv-slot"><div class="inv-icon">📉</div><div class="inv-label">SPSS</div></div>
-                <div class="inv-slot"><div class="inv-icon">📊</div><div class="inv-label">Excel/Dashboards</div></div>
-                <div class="inv-slot"><div class="inv-icon">🗺️</div><div class="inv-label">Lucidchart</div></div>
-                <div class="inv-slot"><div class="inv-icon">🗣️</div><div class="inv-label">Voiceflow</div></div>
+                <div class="inv-slot"><div class="inv-label">Figma</div></div>
+                <div class="inv-slot"><div class="inv-label">Tableau</div></div>
+                <div class="inv-slot"><div class="inv-label">SPSS</div></div>
+                <div class="inv-slot"><div class="inv-label">Excel/Dashboards</div></div>
+                <div class="inv-slot"><div class="inv-label">Lucidchart</div></div>
+                <div class="inv-slot"><div class="inv-label">Voiceflow</div></div>
               </div>
             </div>
 
             <div class="inv-group">
               <div class="inv-group-title">PRACTICE</div>
               <div class="inv-grid">
-                <div class="inv-slot"><div class="inv-icon">🏗️</div><div class="inv-label">System Design</div></div>
-                <div class="inv-slot"><div class="inv-icon">🔬</div><div class="inv-label">Research Strategy</div></div>
-                <div class="inv-slot"><div class="inv-icon">📈</div><div class="inv-label">Data Viz</div></div>
-                <div class="inv-slot"><div class="inv-icon">📐</div><div class="inv-label">Statistical Analysis</div></div>
-                <div class="inv-slot"><div class="inv-icon">✍️</div><div class="inv-label">Technical Writing</div></div>
-                <div class="inv-slot"><div class="inv-icon">🧭</div><div class="inv-label">Team Leadership</div></div>
+                <div class="inv-slot"><div class="inv-label">System Design</div></div>
+                <div class="inv-slot"><div class="inv-label">Research Strategy</div></div>
+                <div class="inv-slot"><div class="inv-label">Data Viz</div></div>
+                <div class="inv-slot"><div class="inv-label">Statistical Analysis</div></div>
+                <div class="inv-slot"><div class="inv-label">Technical Writing</div></div>
+                <div class="inv-slot"><div class="inv-label">Team Leadership</div></div>
               </div>
             </div>
           </section>
@@ -662,7 +658,7 @@ body.crt-off .scanlines{display:none}
 
             <div class="quest pxpanel">
               <div class="quest-top"><span class="quest-name">TheMovieDetective</span><span class="quest-diff">★★★★★</span></div>
-              <span class="quest-status done">✅ COMPLETED</span>
+              <span class="quest-status live">🟢 LIVE</span>
               <div class="quest-desc">Hybrid movie/TV search — TMDB, sentence transformers, ChromaDB &amp; Claude AI, semantic search + reranking.</div>
               <div class="quest-loot"><span class="loot-tag">Sentence Transformers</span><span class="loot-tag">ChromaDB</span><span class="loot-tag">Claude AI</span></div>
               <div class="quest-links"><a href="https://github.com/Charles-AM" target="_blank" rel="noopener" class="qbtn alt">📜 SCROLLS</a></div>
@@ -671,8 +667,7 @@ body.crt-off .scanlines{display:none}
 
           <!-- ═══ LEVEL 5 — SIDE QUESTS ═══ -->
           <section class="level" data-level="5">
-            <div class="lv-title">LV.5 — <em>SIDE QUESTS</em></div>
-            <div class="lv-sub">// optional, but highly recommended</div>
+            <div class="lv-title" style="margin-bottom:26px">LV.5 — <em>SIDE QUESTS</em></div>
 
             <div class="side-grid">
               <div class="side-card pxpanel">
@@ -707,10 +702,10 @@ body.crt-off .scanlines{display:none}
             <div class="lv-title">LV.6 — <em>GUILD ALLIANCES</em></div>
             <div class="lv-sub">// 6 guilds joined</div>
 
-            <div class="guild-row pxpanel"><div class="guild-badge">SC</div><div class="guild-name">ISCB&#8209;SC — Volunteer, International Society for Computational Biology Student Council</div></div>
-            <div class="guild-row pxpanel"><div class="guild-badge">OB</div><div class="guild-name">Open Bioinformatics Foundation</div></div>
+            <div class="guild-row pxpanel"><div class="guild-badge">ISCB</div><div class="guild-name">ISCB&#8209;SC — Volunteer, International Society for Computational Biology Student Council</div></div>
+            <div class="guild-row pxpanel"><div class="guild-badge">OBF</div><div class="guild-name">Open Bioinformatics Foundation</div></div>
             <div class="guild-row pxpanel"><div class="guild-badge">GSU</div><div class="guild-name">Center for Excellence in Teaching, Learning &amp; Online Education (CETLOE) — GSU</div></div>
-            <div class="guild-row pxpanel"><div class="guild-badge">SM</div><div class="guild-name">American Society for Microbiology</div></div>
+            <div class="guild-row pxpanel"><div class="guild-badge">ASM</div><div class="guild-name">American Society for Microbiology</div></div>
             <div class="guild-row pxpanel"><div class="guild-badge">PI</div><div class="guild-name">Panther Involvement Network — Instructional Innovation &amp; Technology (GSU)</div></div>
             <div class="guild-row pxpanel"><div class="guild-badge">UG</div><div class="guild-name">Computer Science Students Association — University of Ghana</div></div>
           </section>
@@ -723,18 +718,12 @@ body.crt-off .scanlines{display:none}
             <div class="boss-banner">⚡ A WILD OPPORTUNITY APPEARED!</div>
             <div class="boss-flavor">Recruiters have entered a strategic encounter.<br/>Charles is actively seeking internship &amp; graduate research opportunities. Choose your action:</div>
 
-            <div class="boss-bar-row">
-              <div class="boss-bar-label"><span>OPPORTUNITY</span><span>92/100</span></div>
-              <div class="boss-bar-track"><div class="boss-bar-fill" data-w="92"></div></div>
-            </div>
-
             <div class="battle-menu">
-              <a href="mailto:cappiahmanu1@student.gsu.edu" class="battle-opt"><span class="ic">⚔️</span> SEND MESSAGE</a>
-              <a href="https://www.linkedin.com/in/charles-appiah-manu-jnr-5a011327b/" target="_blank" rel="noopener" class="battle-opt pink"><span class="ic">🛡️</span> CONNECT (LinkedIn)</a>
-              <a href="https://github.com/Charles-AM" target="_blank" rel="noopener" class="battle-opt yellow"><span class="ic">📜</span> VIEW CODE (GitHub)</a>
-              <a href="tel:+14049341868" class="battle-opt"><span class="ic">☎️</span> CALL +1 404&#8209;934&#8209;1868</a>
-              <a href="mailto:appiahmanuc@gmail.com" class="battle-opt pink"><span class="ic">✉️</span> GMAIL</a>
-              <a href="mailto:cappiahmanu1@student.gsu.edu" class="battle-opt yellow"><span class="ic">🎓</span> GSU EMAIL</a>
+              <a href="mailto:cappiahmanu1@student.gsu.edu" class="battle-opt"><span class="opt-tag">EMAIL</span><span class="opt-val">cappiahmanu1@student.gsu.edu</span></a>
+              <a href="https://www.linkedin.com/in/charles-appiah-manu-jnr-5a011327b/" target="_blank" rel="noopener" class="battle-opt pink"><span class="opt-tag">LINKEDIN</span><span class="opt-val">linkedin.com/in/charles&#8209;appiah&#8209;manu&#8209;jnr&#8209;5a011327b</span></a>
+              <a href="https://github.com/Charles-AM" target="_blank" rel="noopener" class="battle-opt yellow"><span class="opt-tag">GITHUB</span><span class="opt-val">github.com/Charles&#8209;AM</span></a>
+              <a href="tel:+14049341868" class="battle-opt"><span class="opt-tag">PHONE</span><span class="opt-val">+1 404&#8209;934&#8209;1868</span></a>
+              <a href="mailto:appiahmanuc@gmail.com" class="battle-opt pink"><span class="opt-tag">GMAIL</span><span class="opt-val">appiahmanuc@gmail.com</span></a>
             </div>
 
             <div class="gg-footer">© 2026 CHARLES APPIAH&#8209;MANU — ATLANTA, GA<br/>CONTINUE? (Y/N)</div>
@@ -850,7 +839,7 @@ document.querySelectorAll('.arcade-btn').forEach(function(btn){
 
 /* animate stat / boss bars once on first view of their level */
 function fillBars(root){
-  root.querySelectorAll('.bar-fill,.boss-bar-fill').forEach(function(b){
+  root.querySelectorAll('.bar-fill').forEach(function(b){
     if(b.dataset.filled) return;
     b.dataset.filled='1';
     var w=b.dataset.w||'0';
