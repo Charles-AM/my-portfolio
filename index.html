@@ -65,7 +65,7 @@ body::before{
    LAYOUT SHELLS
 ══════════════════════════════════════ */
 .stage{
-  position:relative;z-index:1;min-height:100dvh;min-height:100vh;
+  position:relative;z-index:1;min-height:100vh;min-height:100svh;
   display:flex;align-items:center;justify-content:center;padding:28px;
 }
 
@@ -101,11 +101,14 @@ body::before{
   .stage{padding:0}
   .console-shell{
     max-width:100%;border-radius:0;padding:0;background:none;box-shadow:none;border:none;
-    display:flex;flex-direction:column;height:100dvh;height:100vh;
+    display:flex;flex-direction:column;height:100vh;height:100svh;
   }
   .shell-top{display:none}
   .screen-frame{border-radius:0;padding:0;background:none;box-shadow:none;flex:1;min-height:0}
-  .game-screen{border-radius:0;aspect-ratio:auto;height:100%;padding-bottom:78px}
+  .game-screen{
+    border-radius:0;aspect-ratio:auto;height:100%;
+    padding-bottom:calc(66px + env(safe-area-inset-bottom,0px) + 12px);
+  }
 }
 
 /* ══════════════════════════════════════
@@ -291,7 +294,6 @@ body.crt-off .scanlines{display:none}
 ══════════════════════════════════════ */
 .side-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
 .side-card{padding:16px}
-.side-icon{font-size:1.2rem;margin-bottom:10px}
 .side-title{font-size:.6rem;color:var(--text);margin-bottom:10px;line-height:1.6}
 .side-desc{font-size:.5rem;line-height:1.9;color:var(--dim);margin-bottom:12px}
 .side-tags{display:flex;flex-wrap:wrap;gap:6px}
@@ -425,9 +427,9 @@ body.crt-off .scanlines{display:none}
           <section class="level active" data-level="0" id="lvl-start">
             <div class="start-inner">
               <div class="start-logo">CHARLES<br/><span class="hot">APPIAH&#8209;MANU</span></div>
-              <div class="start-sub">A SOFTWARE ENGINEER RPG</div>
+              <div class="start-sub">A PORTFOLIO RPG</div>
               <button class="press-start" id="btn-start-game">▶ PRESS START</button>
-              <div class="start-coin"><span>🪙</span> INSERT COIN TO CONTINUE · © 2026 CAM SOFTWORKS</div>
+              <div class="start-coin"><span>🪙</span> INSERT COIN TO CONTINUE · © 2026 CAM</div>
             </div>
           </section>
 
@@ -650,7 +652,7 @@ body.crt-off .scanlines{display:none}
 
             <div class="quest pxpanel">
               <div class="quest-top"><span class="quest-name">Student Health AI Platform</span><span class="quest-diff">★★★★<span class="dim">☆</span></span></div>
-              <span class="quest-status done">✅ COMPLETED</span>
+              <span class="quest-status live">🟢 LIVE</span>
               <div class="quest-desc">Helps University of Ghana students navigate mental health &amp; STI education — AI chatbot, quizzes, self-assessment.</div>
               <div class="quest-loot"><span class="loot-tag">Flask</span><span class="loot-tag">Voiceflow</span><span class="loot-tag">OpenAI API</span></div>
               <div class="quest-links"><a href="https://github.com/Charles-AM" target="_blank" rel="noopener" class="qbtn alt">📜 SCROLLS</a></div>
@@ -671,25 +673,21 @@ body.crt-off .scanlines{display:none}
 
             <div class="side-grid">
               <div class="side-card pxpanel">
-                <div class="side-icon">🧬</div>
                 <div class="side-title">Bioinformatics</div>
                 <div class="side-desc">Genomics, sequence analysis, protein structure prediction &amp; molecular docking with BLAST, MEGA, IGV.</div>
                 <div class="side-tags"><span class="side-tag">Genomics</span><span class="side-tag">BLAST</span><span class="side-tag">Docking</span></div>
               </div>
               <div class="side-card pxpanel pink">
-                <div class="side-icon">⚙️</div>
                 <div class="side-title">Software Engineering</div>
                 <div class="side-desc">Full-stack system design, scalable architectures &amp; clean code — building robust, maintainable apps.</div>
                 <div class="side-tags"><span class="side-tag">System Design</span><span class="side-tag">Backend</span><span class="side-tag">Frontend</span></div>
               </div>
               <div class="side-card pxpanel yellow">
-                <div class="side-icon">📊</div>
                 <div class="side-title">Data Analysis &amp; Analytics</div>
                 <div class="side-desc">Statistical analysis, visualization &amp; BI — R, Python, SPSS and Excel turning data into decisions.</div>
                 <div class="side-tags"><span class="side-tag">Statistics</span><span class="side-tag">Viz</span><span class="side-tag">R &amp; Python</span></div>
               </div>
               <div class="side-card pxpanel purple">
-                <div class="side-icon">🔬</div>
                 <div class="side-title">Research &amp; Innovation</div>
                 <div class="side-desc">Applied research combining tech with domain expertise — user research, prototyping, experimentation.</div>
                 <div class="side-tags"><span class="side-tag">User Research</span><span class="side-tag">Prototyping</span></div>
@@ -723,7 +721,6 @@ body.crt-off .scanlines{display:none}
               <a href="https://www.linkedin.com/in/charles-appiah-manu-jnr-5a011327b/" target="_blank" rel="noopener" class="battle-opt pink"><span class="opt-tag">LINKEDIN</span><span class="opt-val">linkedin.com/in/charles&#8209;appiah&#8209;manu&#8209;jnr&#8209;5a011327b</span></a>
               <a href="https://github.com/Charles-AM" target="_blank" rel="noopener" class="battle-opt yellow"><span class="opt-tag">GITHUB</span><span class="opt-val">github.com/Charles&#8209;AM</span></a>
               <a href="tel:+14049341868" class="battle-opt"><span class="opt-tag">PHONE</span><span class="opt-val">+1 404&#8209;934&#8209;1868</span></a>
-              <a href="mailto:appiahmanuc@gmail.com" class="battle-opt pink"><span class="opt-tag">GMAIL</span><span class="opt-val">appiahmanuc@gmail.com</span></a>
             </div>
 
             <div class="gg-footer">© 2026 CHARLES APPIAH&#8209;MANU — ATLANTA, GA<br/>CONTINUE? (Y/N)</div>
