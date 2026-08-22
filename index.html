@@ -105,10 +105,11 @@ body::before{
   }
   .shell-top{display:none}
   .screen-frame{border-radius:0;padding:0;background:none;box-shadow:none;flex:1;min-height:0}
-  .game-screen{
-    border-radius:0;aspect-ratio:auto;height:100%;
-    padding-bottom:calc(66px + env(safe-area-inset-bottom,0px) + 12px);
-  }
+  .game-screen{border-radius:0;aspect-ratio:auto;height:100%}
+  /* reserve space on the SCROLLING element itself — padding on game-screen
+     has no effect on levels-wrap since it's an abspos inset:0 child, which
+     sizes to the padding box and ignores the parent's own padding */
+  .levels-wrap{padding-bottom:calc(66px + env(safe-area-inset-bottom,0px) + 12px)}
 }
 
 /* ══════════════════════════════════════
@@ -190,7 +191,7 @@ body.crt-off .scanlines{display:none}
 /* ══════════════════════════════════════
    START SCREEN
 ══════════════════════════════════════ */
-#lvl-start.active{padding:0;height:100%;display:flex;align-items:center;justify-content:center}
+#lvl-start.active{padding:0;min-height:100%;display:flex;align-items:center;justify-content:center}
 .start-inner{text-align:center;padding:20px}
 .start-logo{font-size:clamp(1.1rem,4.5vw,1.9rem);line-height:1.6;color:var(--text);text-shadow:0 0 6px var(--cyan),0 0 24px rgba(0,246,255,.5)}
 .start-logo .hot{color:var(--pink);text-shadow:0 0 6px var(--pink),0 0 24px rgba(255,46,151,.6)}
